@@ -122,17 +122,24 @@ body {
   justify-content: space-between;
 }
 
-.menu-logo-link{
+.menu-logo-link {
   width: 179px;
   height: 41px;
   padding-top: 29px;
   padding-left: 18px;
 }
 
+@media (max-width: 640px) {
+  .menu-logo-link {
+    margin: auto;
+  }
+}
+
 .menu {
   padding-top: 41px;
   padding-right: 15px;
 }
+
 
 .menu__button {
   width: 1.4em;
@@ -175,7 +182,7 @@ body {
   display: flex;
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (max-width: 1199px) {
   .menu-list {
     position: absolute;
     width: 1px;
@@ -243,13 +250,13 @@ body {
   margin-top: 59px;
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 641px) and (max-width: 1199px) {
   .trends-header {
-    font-size: 18px;
+    font-size: 2.34vw;
   }
 }
 
-.trends-cards{
+.trends-cards {
   display: flex;
   margin-top: 28px;
 }
@@ -267,22 +274,21 @@ body {
   justify-content: center;
 }
 
-@media (max-width: 1199px) {
-.trends-cards {
-  flex-wrap: wrap;
-}
-.trends-card {
-  width: 49.74%;
-  margin-right: 0.52%;
-}
-.card-two {
-  margin-right: 0px;
- }
-
- .card-three, .card-four {
-  margin-top: 0.39%;
-}
-}
+@media (min-width: 641px) and (max-width: 1199px) {
+  .trends-cards {
+    flex-wrap: wrap;
+  }
+  .trends-card {
+    width: 49.74%;
+    margin-right: 0.52%;
+  }
+  .card-two {
+    margin-right: 0px;
+   }
+   .card-three, .card-four {
+    margin-top: 0.39%;
+  }
+  }
 
 .trends-card::before {
   content:'';
@@ -331,9 +337,9 @@ body {
   line-height: 24px;
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 641px) and (max-width: 1199px) {
   .trends-header-link {
-    font-size: 17px;
+    font-size: 2.213vw;
   }
 }
 
@@ -375,20 +381,15 @@ body {
   flex-wrap: wrap;
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 641px) and (max-width: 1199px) {
   .posts-and-aside {
-    min-width: 698px;
-  }
-  }
-
-@media (min-width: 768px) and (max-width: 1199px) {
-  .posts-and-aside {
-    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 }
 
 .main {
-  max-width: 793px;
+ max-width: 792px;
 }
 
 .post {
@@ -396,7 +397,14 @@ body {
   padding-left: 15px;
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+.post:nth-child(n+2) {
+  margin-top: 60px;
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
+  .main {
+    width: 51.042%;
+  }
   .post {
     flex-wrap: wrap;
     max-width: 391px;
@@ -415,11 +423,8 @@ body {
   }
 }
 
-.post:nth-child(n+2) {
-  margin-top: 60px;
-}
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 641px) and (max-width: 1199px) {
   .post:nth-child(n+2) {
     margin-top: 42px;
   }
@@ -435,7 +440,7 @@ body {
   margin-left: 30px;
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 641px) and (max-width: 1199px) {
 .post-text {
   margin-left: 0px;
   margin-top: 15px;
@@ -481,7 +486,7 @@ body {
   line-height: 24px;
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 641px) and (max-width: 1199px) {
   .post-header-link {
     font-size: 17px;
   }
@@ -494,6 +499,7 @@ body {
 .date-author {
   margin-top: 28px;
 }
+
 
 .author {
   margin-left: 15px;
@@ -516,6 +522,12 @@ body {
   margin-top: 43px;
 }
 
+@media (min-width: 641px) and (max-width: 1199px) {
+  .post-article-texts {
+    margin-top: 8.673%;
+  }
+}
+
 .post-article {
   font-family: "OpenSans-Regular";
   font-weight: regular;
@@ -532,7 +544,7 @@ body {
 
 .side-bar {
   width: 272px;
-  margin-right: 15px;
+  margin-right: 1.25%;
 }
 
 /*новые посты*/
@@ -797,11 +809,14 @@ text-decoration: none;
   flex-direction: column;
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 641px) and (max-width: 1199px) {
   .products-pictures {
     flex-wrap: wrap;
     margin-left: 4.4%;
     margin-right: 4.4%;
+  }
+  .product-picture:nth-child(n+3) {
+    margin-top: 28px;
   }
 }
 
@@ -819,6 +834,7 @@ text-decoration: none;
   box-sizing: border-box;
   flex-grow: 1;
 }
+
 
 .product-header {
   padding-top: 45px;
@@ -895,6 +911,7 @@ text-decoration: none;
   margin: 64px auto 0px auto;
   max-width: 1170px;
 }
+
 
 .articles-socials {
   width: 100%;
